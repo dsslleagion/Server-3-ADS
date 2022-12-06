@@ -14,7 +14,7 @@ sudo apt update -y ; sudo apt upgrade -y
 sudo apt install mysql-server -y
 sudo apt update -y ; sudo apt upgrade -y
 
-mysql -h"localhost" -u"root" -p"fatecsjc" -e "create database embraer;"
+mysql -h"localhost" -u"root" -p"fatec" -e "create database api;"
 
 touch /etc/systemd/system/serverExpress.service
 
@@ -27,7 +27,7 @@ Type=simple
 Restart=always
 RestartSec=1
 User=root
-ExecStart=/usr/bin/node /home/mateus/dist/server/dist/index.js
+ExecStart=/usr/bin/node /home/dionisio/Server-3-ADS/dist/server.js
  
 [Install]
 WantedBy=multi-user.target
